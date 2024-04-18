@@ -1,10 +1,12 @@
 import { FcGoogle } from "react-icons/fc";
 import { RxGithubLogo } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import Navbar from "../shared/Navbar";
 
 const Login = () => {
   return (
     <div>
+      <Navbar></Navbar>
       <div className="hero pt-4">
         <div className="py-10 px-16 border rounded-md">
           <div className="text-left pb-8">

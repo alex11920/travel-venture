@@ -2,35 +2,47 @@ import { BiSearch } from "react-icons/bi";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const HomeNavbar = () => {
   const navLinks = (
     <>
-      <Link to="/" className="btn btn-ghost font-medium text-base mx-4">
+      <Link
+        to="/"
+        className="btn btn-ghost text-white font-medium text-base mx-4 hover:bg-[#FFFFFF33]"
+      >
         News
       </Link>
-      <Link to="/blogs" className="btn btn-ghost font-medium text-base mx-4">
+      <Link
+        to="/blogs"
+        className="btn btn-ghost text-white font-medium text-base mx-4 hover:bg-[#FFFFFF33]"
+      >
         Destination
       </Link>
-      <Link to="/blogs" className="btn btn-ghost font-medium text-base mx-4">
+      <Link
+        to="/blogs"
+        className="btn btn-ghost text-white font-medium text-base mx-4 hover:bg-[#FFFFFF33]"
+      >
         Blog
       </Link>
-      <Link to="/blogs" className="btn btn-ghost font-medium text-base mx-4">
+      <Link
+        to="/blogs"
+        className="btn btn-ghost text-white font-medium text-base mx-4 hover:bg-[#FFFFFF33]"
+      >
         Contact
       </Link>{" "}
     </>
   );
   const mbLinks = (
     <>
-      <Link to="/" className="font-medium text-base">
+      <Link to="/" className="text-black font-medium text-base">
         News
       </Link>
-      <Link to="/blogs" className="font-medium text-base">
+      <Link to="/blogs" className="text-black font-medium text-base">
         Destination
       </Link>
-      <Link to="/blogs" className="font-medium text-base">
+      <Link to="/blogs" className="text-black font-medium text-base">
         Blog
       </Link>
-      <Link to="/blogs" className="font-medium text-base">
+      <Link to="/blogs" className="text-black font-medium text-base">
         Contact
       </Link>
     </>
@@ -43,7 +55,7 @@ const Navbar = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -66,12 +78,12 @@ const Navbar = () => {
           {/* logo */}
           <a>
             <Link to="/" className="text-3xl font-bold">
-              <img src="/src/assets/icons/logo-y.png" />
+              <img src="/src/assets/icons/logo.png" />
             </Link>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex lg:items-center">
-          <label className="input input-bordered w-96 flex items-center gap-2 mr-6">
+          <label className="input input-bordered bg-[#FFFFFF33] border-white text-white w-96 flex items-center gap-2 mr-6">
             <BiSearch className="text-xl" />
             <input
               type="text"
@@ -96,4 +108,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default HomeNavbar;
