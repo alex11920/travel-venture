@@ -1,28 +1,27 @@
 [
-    {
-      "location_name": "Sundarbans",
-      "description": "The Sundarbans, located in the southwestern part of Bangladesh, is the largest mangrove forest in the world. It is home to the Bengal tiger, numerous bird species, and diverse flora and fauna. The Sundarbans is a UNESCO World Heritage Site and a haven for nature lovers and wildlife enthusiasts. Visitors can explore the dense mangrove forests through boat tours, spotting wildlife such as crocodiles, deer, and monkeys. The tranquil beauty of the Sundarbans, with its winding waterways and lush greenery, offers a unique and unforgettable experience for tourists.",
-      "image_url": "https://example.com/sundarbans.jpg"
-    },
-    {
-      "location_name": "Cox's Bazar",
-      "description": "Cox's Bazar is known for having the world's longest natural sandy sea beach, stretching over 120 kilometers along the Bay of Bengal. It is a popular tourist destination, offering scenic views of the sea, golden sands, and majestic sunsets. Tourists flock to Cox's Bazar to relax on the beach, swim in the clear blue waters, and enjoy water sports such as surfing and jet skiing. The town also has vibrant markets, seafood restaurants, and cultural attractions, making it a must-visit destination for beach lovers and holidaymakers.",
-      "image_url": "https://example.com/coxs-bazar.jpg"
-    },
-    {
-      "location_name": "Srimangal",
-      "description": "Srimangal, also known as the 'Tea Capital of Bangladesh', is located in the northeastern part of the country. It is renowned for its lush tea gardens, rolling hills, and tranquil ambiance. Tourists visit Srimangal to explore the tea estates, where they can learn about tea cultivation and processing techniques. The area is also home to scenic hiking trails, wildlife sanctuaries, and picturesque waterfalls. Visitors can immerse themselves in the natural beauty of Srimangal while sipping freshly brewed tea and enjoying the serene surroundings.",
-      "image_url": "https://example.com/srimangal.jpg"
-    },
-    {
-      "location_name": "Bandarban",
-      "description": "Bandarban, nestled in the Chittagong Hill Tracts of southeastern Bangladesh, is a paradise for nature lovers and adventure enthusiasts. It is characterized by its rugged terrain, verdant hills, and tribal communities. Tourists visit Bandarban to trek through its pristine forests, visit tribal villages, and marvel at breathtaking landscapes. The area is home to numerous attractions, including the Boga Lake, Nilgiri Hills, and Nafakhum Waterfall. Bandarban offers an off-the-beaten-path experience, allowing visitors to connect with nature and explore the rich cultural heritage of the indigenous communities.",
-      "image_url": "https://example.com/bandarban.jpg"
-    },
-    {
-      "location_name": "Saint Martin's Island",
-      "description": "Saint Martin's Island, located in the Bay of Bengal, is the only coral island in Bangladesh. It is known for its crystal-clear waters, coral reefs, and pristine beaches. Tourists visit Saint Martin's Island to relax on its sandy shores, swim in the turquoise waters, and snorkel or dive to explore the colorful marine life. The island is also famous for its stunning sunsets and tranquil atmosphere, making it an ideal destination for honeymooners and romantic getaways. With its untouched beauty and serene ambiance, Saint Martin's Island offers a peaceful retreat for travelers seeking a break from the hustle and bustle of city life.",
-      "image_url": "https://example.com/saint-martins-island.jpg"
-    }
-  ]
-  
+  {
+    "location_name": "Sundarbans",
+    "description": "The Sundarbans, located in the southwestern part of Bangladesh, is the largest mangrove forest in the world. It is home to the Bengal tiger, numerous bird species, and diverse flora and fauna. The Sundarbans is a UNESCO World Heritage Site and a haven for nature lovers and wildlife enthusiasts. Visitors can explore the dense mangrove forests through boat tours, spotting wildlife such as crocodiles, deer, and monkeys. The tranquil beauty of the Sundarbans, with its winding waterways and lush greenery, offers a unique and unforgettable experience for tourists.",
+    "image_url": "https://example.com/sundarbans.jpg"
+  },
+  {
+    "location_name": "Cox's Bazar",
+    "description": "Cox's Bazar is known for having the world's longest natural sandy sea beach, stretching over 120 kilometers along the Bay of Bengal. It is a popular tourist destination, offering scenic views of the sea, golden sands, and majestic sunsets. Tourists flock to Cox's Bazar to relax on the beach, swim in the clear blue waters, and enjoy water sports such as surfing and jet skiing. The town also has vibrant markets, seafood restaurants, and cultural attractions, making it a must-visit destination for beach lovers and holidaymakers.",
+    "image_url": "https://example.com/coxs-bazar.jpg"
+  },
+  {
+    "location_name": "Srimangal",
+    "description": "Srimangal, also known as the 'Tea Capital of Bangladesh', is located in the northeastern part of the country. It is renowned for its lush tea gardens, rolling hills, and tranquil ambiance. Tourists visit Srimangal to explore the tea estates, where they can learn about tea cultivation and processing techniques. The area is also home to scenic hiking trails, wildlife sanctuaries, and picturesque waterfalls. Visitors can immerse themselves in the natural beauty of Srimangal while sipping freshly brewed tea and enjoying the serene surroundings.",
+    "image_url": "https://example.com/srimangal.jpg"
+  },
+  {
+    "location_name": "Bandarban",
+    "description": "Bandarban, nestled in the Chittagong Hill Tracts of southeastern Bangladesh, is a paradise for nature lovers and adventure enthusiasts. It is characterized by its rugged terrain, verdant hills, and tribal communities. Tourists visit Bandarban to trek through its pristine forests, visit tribal villages, and marvel at breathtaking landscapes. The area is home to numerous attractions, including the Boga Lake, Nilgiri Hills, and Nafakhum Waterfall. Bandarban offers an off-the-beaten-path experience, allowing visitors to connect with nature and explore the rich cultural heritage of the indigenous communities.",
+    "image_url": "https://example.com/bandarban.jpg"
+  },
+  {
+    "location_name": "Saint Martin's Island",
+    "description": "Saint Martin's Island, located in the Bay of Bengal, is the only coral island in Bangladesh. It is known for its crystal-clear waters, coral reefs, and pristine beaches. Tourists visit Saint Martin's Island to relax on its sandy shores, swim in the turquoise waters, and snorkel or dive to explore the colorful marine life. The island is also famous for its stunning sunsets and tranquil atmosphere, making it an ideal destination for honeymooners and romantic getaways. With its untouched beauty and serene ambiance, Saint Martin's Island offers a peaceful retreat for travelers seeking a break from the hustle and bustle of city life.",
+    "image_url": "https://example.com/saint-martins-island.jpg"
+  }
+]

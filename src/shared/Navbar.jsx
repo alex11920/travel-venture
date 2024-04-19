@@ -64,11 +64,9 @@ const Navbar = () => {
             </ul>
           </div>
           {/* logo */}
-          <a>
-            <Link to="/" className="text-3xl font-bold">
-              <img src="/src/assets/icons/logo-y.png" />
-            </Link>
-          </a>
+          <Link to="/" className="text-3xl font-bold">
+            <img src="/src/assets/icons/logo-y.png" />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex lg:items-center">
           <label className="input input-bordered w-96 flex items-center gap-2 mr-6">

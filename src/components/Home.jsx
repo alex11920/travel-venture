@@ -25,7 +25,7 @@ const Home = () => {
         }}
       >
         <div className="hero-overlay bg-[#000000B2]"></div>
-        <div className="text-white relative z-10 flex gap-24 items-center">
+        <div className="text-white relative z-10 flex gap-36 items-center">
           <div className="max-w-lg">
             <h1 className="mb-5 head text-8xl">Cox's bazar</h1>
             <p className="mb-5">
@@ -121,31 +121,67 @@ const Home = () => {
 
           {/* form card */}
           <div className="w-96 shadow-2xl rounded-lg bg-base-100">
-            <form className="card-body">
+            <form className="card-body text-black">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Origin</span>
+                  <span className="label-text text-[#818181] font-medium">
+                    Origin
+                  </span>
                 </label>
                 <input
                   type="email"
-                  placeholder="email"
-                  className="input input-bordered"
+                  placeholder="Origin"
+                  className="input input-bordered border-none bg-[#F2F2F2]"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Destination</span>
+                  <span className="label-text text-[#818181] font-medium">
+                    Destination
+                  </span>
                 </label>
                 <input
                   type="password"
-                  placeholder="password"
-                  className="input input-bordered"
+                  placeholder="Destination"
+                  className="input input-bordered border-none bg-[#F2F2F2]"
                   required
                 />
               </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-[#818181] font-medium">
+                      From
+                    </span>
+                  </label>
+                  <input
+                    type="date"
+                    placeholder="From"
+                    className="input input-bordered border-none bg-[#F2F2F2] cursor-pointer"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-[#818181] font-medium">
+                      To
+                    </span>
+                  </label>
+                  <input
+                    type="date"
+                    placeholder="To"
+                    className="input input-bordered border-none bg-[#F2F2F2] cursor-pointer"
+                    required
+                  />
+                </div>
+              </div>
               <div className="form-control mt-6">
-                <button className="btn back-yellow">Start Booking</button>
+                <Link to="/hotels">
+                  <button className="btn btn-ghost back-yellow w-full">
+                    Start Booking
+                  </button>
+                </Link>
               </div>
             </form>
           </div>

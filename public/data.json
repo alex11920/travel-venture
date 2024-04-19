@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "hotel_name": "Seagull Hotel",
+    "hotel_image": "../src/assets/Rectangle 26.png",
+    "guests": 2,
+    "rooms": {
+      "bedrooms": 1,
+      "beds": 2,
+      "baths": 1
+    },
+    "facility": ["Swimming Pool", "Spa", "Restaurant", "Gym"],
+    "cancellation_flexibility": "Yes",
+    "ratings": 4.5,
+    "total_users_given_ratings": 500,
+    "cost_per_night": 150
+  },
+  {
+    "id": 2,
+    "hotel_name": "Long Beach Hotel",
+    "hotel_image": "../src/assets/Rectangle 27.png",
+    "guests": 3,
+    "rooms": {
+      "bedrooms": 2,
+      "beds": 3,
+      "baths": 2
+    },
+    "facility": ["Swimming Pool", "Private Beach Access", "Restaurant", "Spa"],
+    "cancellation_flexibility": "No",
+    "ratings": 4.7,
+    "total_users_given_ratings": 700,
+    "cost_per_night": 200
+  },
+  {
+    "id": 3,
+    "hotel_name": "Royal Tulip Beach Resort & Spa",
+    "hotel_image": "../src/assets/hammocks-with-palm-trees.jpg",
+    "guests": 4,
+    "rooms": {
+      "bedrooms": 3,
+      "beds": 4,
+      "baths": 3
+    },
+    "facility": [
+      "Swimming Pool",
+      "Private Beach Access",
+      "Spa",
+      "Gym",
+      "Tennis Court"
+    ],
+    "cancellation_flexibility": "Yes",
+    "ratings": 4.8,
+    "total_users_given_ratings": 1000,
+    "cost_per_night": 250
+  },
+  {
+    "id": 4,
+    "hotel_name": "Sayeman Beach Resort",
+    "hotel_image": "../src/assets/mohd-elle-oji.jpg",
+    "guests": 2,
+    "rooms": {
+      "bedrooms": 1,
+      "beds": 1,
+      "baths": 1
+    },
+    "facility": ["Swimming Pool", "Private Beach Access", "Restaurant", "Spa"],
+    "cancellation_flexibility": "No",
+    "ratings": 4.2,
+    "total_users_given_ratings": 400,
+    "cost_per_night": 120
+  },
+  {
+    "id": 5,
+    "hotel_name": "Mermaid Eco Resort",
+    "hotel_image": "../src/assets/allphoto-bangkok.jpg",
+    "guests": 4,
+    "rooms": {
+      "bedrooms": 2,
+      "beds": 3,
+      "baths": 2
+    },
+    "facility": ["Swimming Pool", "Restaurant", "Spa", "Beachfront"],
+    "cancellation_flexibility": "Yes",
+    "ratings": 4.3,
+    "total_users_given_ratings": 600,
+    "cost_per_night": 180
+  },
+  {
+    "id": 6,
+    "hotel_name": "Ocean Paradise Hotel & Resort",
+    "hotel_image": "../src/assets/luxury-bedroom-suite.jpg",
+    "guests": 3,
+    "rooms": {
+      "bedrooms": 2,
+      "beds": 3,
+      "baths": 2
+    },
+    "facility": [
+      "Swimming Pool",
+      "Private Beach Access",
+      "Restaurant",
+      "Spa",
+      "Fitness Center"
+    ],
+    "cancellation_flexibility": "No",
+    "ratings": 4.6,
+    "total_users_given_ratings": 800,
+    "cost_per_night": 190
+  }
+]

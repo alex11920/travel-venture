@@ -7,6 +7,7 @@ import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import SelectedArea from "./components/SelectedArea";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/hotels",
+        element: <SelectedArea />,
+        loader: () => fetch("data.json")
       },
     ],
   },
