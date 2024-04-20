@@ -1,22 +1,37 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../shared/Navbar";
 import { GiRoundStar } from "react-icons/gi";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import { useEffect, useState } from "react";
 
 const SelectedArea = () => {
   const list = useLoaderData();
-  console.log(list);
+  const [dataClick, setDataClick] = useState(null);
+
+  useEffect(() => {
+    if (list.length > 0 && !dataClick) {
+      setDataClick(list[0]);
+    }
+  }, [list, dataClick]);
+
+  const handleDataClick = (data) => {
+    setDataClick(data);
+  };
+
   return (
-    <div>
+    <div className="container mx-auto">
       <Navbar></Navbar>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-12">
+      <h2 className="text-4xl font-bold pt-8">Stay in Cox’s Bazar</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-24 mt-4">
         {/* list */}
-        <span>
-          <h2 className="text-4xl font-bold">Stay in Cox’s Bazar</h2>
+        <span className="col-span-1">
           {list.map((data) => (
             <div
+              onClick={() => handleDataClick(data)}
               key={data.id}
               data={data}
-              className="flex flex-col md:flex-row lg:flex-row gap-10 my-8"
+              className="flex flex-col md:flex-row lg:flex-row gap-10 my-8 cursor-pointer hover:back-yellow"
             >
               <div>
                 <img className="w-80 rounded-md" src={data.hotel_image} />
@@ -66,9 +81,28 @@ const SelectedArea = () => {
         </span>
 
         {/* map */}
-        <span>
-          <p>section 2</p>
-        </span>
+        {dataClick && (
+          <>
+            <span>
+              <MapContainer
+                center={[
+                  dataClick.location.latitude,
+                  dataClick.location.longitude,
+                ]}
+                zoom={20}
+                style={{ height: "800px", borderRadius: "12px" }}
+              >
+                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                <Marker
+                  position={[
+                    dataClick.location.latitude,
+                    dataClick.location.longitude,
+                  ]}
+                ></Marker>
+              </MapContainer>
+            </span>
+          </>
+        )}
       </div>
     </div>
   );

@@ -120,7 +120,7 @@ const Home = () => {
           </div>
 
           {/* form card */}
-          <div className="w-96 shadow-2xl rounded-lg bg-base-100">
+          <div className="shadow-2xl rounded-lg bg-base-100">
             <form className="card-body text-black">
               <div className="form-control">
                 <label className="label">

@@ -4,6 +4,10 @@
     "hotel_name": "Seagull Hotel",
     "hotel_image": "../src/assets/Rectangle 26.png",
     "guests": 2,
+    "location": {
+      "latitude": 21.4251037,
+      "longitude": 91.9760211
+    },
     "rooms": {
       "bedrooms": 1,
       "beds": 2,
@@ -20,6 +24,10 @@
     "hotel_name": "Long Beach Hotel",
     "hotel_image": "../src/assets/Rectangle 27.png",
     "guests": 3,
+    "location": {
+      "latitude": 21.425678468905335,
+      "longitude": 91.97852027004043
+    },
     "rooms": {
       "bedrooms": 2,
       "beds": 3,
@@ -36,6 +44,10 @@
     "hotel_name": "Royal Tulip Beach Resort & Spa",
     "hotel_image": "../src/assets/hammocks-with-palm-trees.jpg",
     "guests": 4,
+    "location": {
+      "latitude": 21.215651389116818,
+      "longitude": 92.04889378516839
+    },
     "rooms": {
       "bedrooms": 3,
       "beds": 4,
@@ -58,6 +70,10 @@
     "hotel_name": "Sayeman Beach Resort",
     "hotel_image": "../src/assets/mohd-elle-oji.jpg",
     "guests": 2,
+    "location": {
+      "latitude": 21.414764720052034,
+      "longitude": 91.98393493424915
+    },
     "rooms": {
       "bedrooms": 1,
       "beds": 1,
@@ -74,6 +90,10 @@
     "hotel_name": "Mermaid Eco Resort",
     "hotel_image": "../src/assets/allphoto-bangkok.jpg",
     "guests": 4,
+    "location": {
+      "latitude": 21.299048659444935,
+      "longitude": 92.05098149831448
+    },
     "rooms": {
       "bedrooms": 2,
       "beds": 3,
@@ -90,6 +110,10 @@
     "hotel_name": "Ocean Paradise Hotel & Resort",
     "hotel_image": "../src/assets/luxury-bedroom-suite.jpg",
     "guests": 3,
+    "location": {
+      "latitude": 21.41891957379063,
+      "longitude": 91.98209887915851
+    },
     "rooms": {
       "bedrooms": 2,
       "beds": 3,
