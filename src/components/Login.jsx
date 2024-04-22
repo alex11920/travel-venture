@@ -1,9 +1,29 @@
 import { FcGoogle } from "react-icons/fc";
 import { RxGithubLogo } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../shared/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+  const { signUser, googleLogin, githubLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+
+    signUser(email, password)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <div>
       <Navbar></Navbar>
@@ -13,7 +33,7 @@ const Login = () => {
             <h1 className="text-2xl font-bold">Login</h1>
           </div>
           <div className="card w-96">
-            <form>
+            <form onSubmit={handleLogin}>
               {/* Email */}
               <div className="form-control">
                 <label className="label">
@@ -69,7 +89,7 @@ const Login = () => {
               <p className="text-center pt-6 font-medium">
                 Don’t have an account?{"  "}
                 <Link to="/register">
-                  <span className="label-text-alt font-medium yellow text-sm link link-hover pt-2">
+                  <span className="label-text-alt font-bold yellow text-sm link link-hover pt-2">
                     Create an account
                   </span>
                 </Link>
@@ -85,11 +105,11 @@ const Login = () => {
         {/* more button */}
         <div className="flex justify-center">
           <div className="flex flex-col gap-2">
-            <button className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]">
+            <button onClick={() => {googleLogin()}} className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]">
               <FcGoogle className="text-2xl" />
               Continue with Google
             </button>
-            <button className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]">
+            <button onClick={() => {githubLogin()}} className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]">
               <RxGithubLogo className="text-2xl" />
               Continue with Github
             </button>

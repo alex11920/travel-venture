@@ -8,6 +8,8 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import SelectedArea from "./components/SelectedArea";
+import AuthProvider from "./providers/AuthProvider";
+import PrivateRoute from "./route/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -29,8 +31,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/hotels",
-        element: <SelectedArea />,
-        loader: () => fetch("data.json")
+        element: (
+          <PrivateRoute>
+            <SelectedArea />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("data.json"),
       },
     ],
   },
@@ -38,6 +44,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
