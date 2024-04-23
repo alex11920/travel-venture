@@ -10,6 +10,7 @@ import Register from "./components/Register";
 import SelectedArea from "./components/SelectedArea";
 import AuthProvider from "./providers/AuthProvider";
 import PrivateRoute from "./route/PrivateRoute";
+import Profile from "./components/Profile";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/hotels",

@@ -1,26 +1,46 @@
 import { FcGoogle } from "react-icons/fc";
 import { RxGithubLogo } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../shared/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 
 const Register = () => {
-  const { createUser, googleLogin, githubLogin } = useContext(AuthContext);
+  const { createUser, googleLogin, githubLogin, currentUserProfile } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
+  const [regError, setRegError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
-    const photoURL = form.get("photoURL");
+    const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(name, photoURL, email, password);
+    console.log(name, photo, email, password);
+
+    setRegError("");
+
+    if (password.length < 6) {
+      setRegError("Password should be at least 6 characters or longer.");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegError("Password should be at least one Uppercase character.");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      setRegError("Password should be at least one Lowercase character.");
+      return;
+    }
 
     // create User
     createUser(email, password)
       .then((result) => {
+        currentUserProfile(name, photo);
         console.log(result.user);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -57,8 +77,8 @@ const Register = () => {
                   </span>
                 </label>
                 <input
-                  type="link"
-                  name="photoURL"
+                  type="url"
+                  name="photo"
                   placeholder="photoURL"
                   className="input input-bordered text-sm"
                   required
@@ -83,32 +103,35 @@ const Register = () => {
               <div className="form-control pt-2">
                 <label className="label">
                   <span className="label-text font-medium text-base">
-                    Password
+                    New Password
                   </span>
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     className="grow text-sm"
-                    placeholder="Password"
+                    placeholder="New Password"
                   />
-                  {/* <span>
+                  <span onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? (
                       <IoEyeOffOutline className="text-xl" />
                     ) : (
                       <IoEyeOutline className="text-xl" />
                     )}
-                  </span> */}
+                  </span>
                 </label>
               </div>
               {/* button */}
               <div className="form-control mt-6">
                 <button className="btn back-yellow">Register</button>
               </div>
+              {regError && (
+                <p className="text-red-700 pt-4 text-center">{regError}</p>
+              )}
 
               {/* login button */}
-              <p className="text-center pt-6 font-medium mb-12">
+              <p className="text-center pt-6 font-medium mb-6">
                 Already have an account?{"  "}
                 <Link to="/login">
                   <span className="label-text-alt font-bold yellow text-sm link link-hover pt-2">

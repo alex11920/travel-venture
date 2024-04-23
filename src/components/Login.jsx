@@ -2,18 +2,34 @@ import { FcGoogle } from "react-icons/fc";
 import { RxGithubLogo } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../shared/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 
 const Login = () => {
   const { signUser, googleLogin, githubLogin } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [regError, setRegError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
+
+    setRegError("");
+
+    if (password.length < 6) {
+      setRegError("Password should be at least 6 characters or longer.");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegError("Password should be at least one Uppercase character.");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      setRegError("Password should be at least one Lowercase character.");
+      return;
+    }
 
     signUser(email, password)
       .then(() => {
@@ -58,18 +74,18 @@ const Login = () => {
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     className="grow text-sm"
                     placeholder="Password"
                   />
-                  {/* <span>
+                  <span onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? (
                       <IoEyeOffOutline className="text-xl" />
                     ) : (
                       <IoEyeOutline className="text-xl" />
                     )}
-                  </span> */}
+                  </span>
                 </label>
                 <label className="label">
                   <a
@@ -84,6 +100,9 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn back-yellow">Login</button>
               </div>
+              {regError && (
+                <p className="text-red-700 pt-4 text-center">{regError}</p>
+              )}
 
               {/* sign up button */}
               <p className="text-center pt-6 font-medium">
@@ -105,11 +124,21 @@ const Login = () => {
         {/* more button */}
         <div className="flex justify-center">
           <div className="flex flex-col gap-2">
-            <button onClick={() => {googleLogin()}} className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]">
+            <button
+              onClick={() => {
+                googleLogin();
+              }}
+              className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]"
+            >
               <FcGoogle className="text-2xl" />
               Continue with Google
             </button>
-            <button onClick={() => {githubLogin()}} className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]">
+            <button
+              onClick={() => {
+                githubLogin();
+              }}
+              className="btn btn-ghost border border-[#C7C7C7] px-40 rounded-full flex items-center gap-4 hover:bg-[#f9a51a]"
+            >
               <RxGithubLogo className="text-2xl" />
               Continue with Github
             </button>
